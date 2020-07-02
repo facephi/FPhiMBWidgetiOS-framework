@@ -282,3 +282,10 @@
 // Age
 #import "MBAgeLimitStatus.h"
 #import "MBAgeResult.h"
+
+// Generic
+#import "MBDriverLicenseDetailedInfo.h"
+#import "MBClassInfo.h"
+#import "MBClassInfoTypes.h"
+#import "MBDocumentImageColorStatus.h"
+#import "MBDocumentImageMoireStatus.h"
