@@ -27,7 +27,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  *
  * Default: 3000
  */
-@property (nonatomic, assign) NSUInteger maxCharsExpected;
+@property (nonatomic, assign) NSInteger maxCharsExpected;
 
 /**
  * Specifies if the additional image processing which drops the background colors should be performed.

@@ -1,8 +1,8 @@
 //
 //  MBBlinkCardRecognizerResult.h
-//  MicroBlinkDev
+//  BlinkShowcaseDev
 //
-//  Created by juraskrlec on 29/08/2018.
+//  Created by Jura Skrlec on 02/11/2020.
 //
 
 #import "MBRecognizerResult.h"
@@ -14,17 +14,23 @@
 #import "MBCombinedFullDocumentImageResult.h"
 #import "MBEncodedCombinedFullDocumentImageResult.h"
 
-#import "MBCardIssuer.h"
+#import "MBIssuer.h"
+#import "MBBlinkCardProcessingStatus.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of the Payment Card
+ * Class representing values obtained when scanning credit/debit cards
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBBlinkCardRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBDigitalSignatureResult, MBCombinedFullDocumentImageResult, MBEncodedCombinedFullDocumentImageResult>
+MB_CLASS_AVAILABLE_IOS(9.0)
+@interface MBBlinkCardRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBDigitalSignatureResult>
 
 MB_INIT_UNAVAILABLE
+
+/**
+ * Payment card's issuing network.
+ */
+@property (nonatomic, readonly) MBIssuer issuer;
 
 /**
  * The payment card number.
@@ -32,34 +38,69 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly) NSString *cardNumber;
 
 /**
+ * The payment card number is valid
+ */
+@property (nonatomic, readonly) BOOL cardNumberValid;
+
+/**
+ * The payment card number prefix.
+ */
+@property (nonatomic, readonly) NSString *cardNumberPrefix;
+
+/**
+ * Payment card's IBAN.
+ */
+@property (nonatomic, readonly) NSString *iban;
+
+/**
+ *  Payment card's security code/value.
+ */
+@property (nonatomic, readonly) NSString *cvv;
+
+/**
+ * The payment card's expiry date.
+ */
+@property (nonatomic, readonly) MBDateResult *expiryDate;
+
+/**
  * Information about the payment card owner (name, company, etc.).
  */
 @property (nonatomic, readonly) NSString *owner;
 
 /**
- * The payment card's last month of validity.
+ * Wheater the first scanned side is blurred.
  */
-@property (nonatomic, readonly) MBDateResult *validThru;
+@property (nonatomic, readonly) BOOL firstSideBlurred;
 
 /**
- *  Payment card's security code/value
+ * Wheater the second scanned side is blurred.
  */
-@property (nonatomic, readonly) NSString *cvv;
+@property (nonatomic, readonly) BOOL secondSideBlurred;
 
 /**
- * Payment card's inventory number.
+ * Full image of the payment card from first side recognition.
  */
-@property (nonatomic, readonly) NSString *inventoryNumber;
+@property (nonatomic, readonly, nullable) MBImage *firstSideFullDocumentImage;
 
 /**
- * Payment card's issuing network
+ * Full image of the payment card from second side recognition.
  */
-@property (nonatomic, readonly) MBCardIssuer issuer;
+@property (nonatomic, readonly, nullable) MBImage *secondSideFullDocumentImage;
 
 /**
- * Payment card's IBAN
+ * JPEG-encoded full document image of the first side of the payment card. Available only if enabled with `MBEncodeFullDocumentImage encodeFullDocumentImage` property.
  */
-@property (nonatomic, readonly) NSString *iban;
+@property (nonatomic, readonly, nullable) NSData *encodedFirstSideFullDocumentImage;
+
+/**
+ * JPEG-encoded full document image of the second side of the payment card. Available only if enabled with `MBEncodeFullDocumentImage encodeFullDocumentImage` property.
+ */
+@property (nonatomic, readonly, nullable) NSData *encodedSecondSideFullDocumentImage;
+
+/**
+ * Status of the last recognition process.
+ */
+@property (nonatomic, readonly) MBBlinkCardProcessingStatus processingStatus;
 
 @end
 

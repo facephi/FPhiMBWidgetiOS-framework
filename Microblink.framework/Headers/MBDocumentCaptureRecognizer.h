@@ -35,7 +35,7 @@ MB_INIT
  *
  * Default: 3
  */
-@property (nonatomic, assign) NSUInteger numStableDetectionsThreshold;
+@property (nonatomic, assign) NSInteger numStableDetectionsThreshold;
 
 /**
  * Defines minimum document scale calculated as ratio of minimal document dimension and minimal dimension of the input image.

@@ -10,8 +10,11 @@
 #import "MBBlinkCardRecognizer.h"
 #import "MBBlinkCardRecognizerResult.h"
 
-#import "MBBlinkCardEliteRecognizer.h"
-#import "MBBlinkCardEliteRecognizerResult.h"
+#import "MBLegacyBlinkCardRecognizer.h"
+#import "MBLegacyBlinkCardRecognizerResult.h"
+
+#import "MBLegacyBlinkCardEliteRecognizer.h"
+#import "MBLegacyBlinkCardEliteRecognizerResult.h"
 
 #import "MBFullDocumentImageResult.h"
 #import "MBEncodedFullDocumentImageResult.h"
@@ -21,3 +24,9 @@
 
 // Protocols
 #import "MBQuadDetectorSubview.h"
+
+// Edit field
+#import "MBBlinkCardEditResult.h"
+
+// Issuer
+#import "MBBlinkCardUtils.h"

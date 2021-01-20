@@ -18,6 +18,8 @@
 #import "MBEncodedFullDocumentImageResult.h"
 #import "MBFaceImageResult.h"
 #import "MBEncodedFaceImageResult.h"
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 #import "MBDriverLicenseDetailedInfo.h"
 #import "MBImageAnalysisResult.h"
@@ -31,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 * The Blink ID Recognizer is used for scanning Blink ID.
 */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBBlinkIdRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBFaceImageResult, MBEncodedFaceImageResult, MBAgeResult, MBDocumentExpirationCheckResult>
+@interface MBBlinkIdRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBFaceImageResult, MBEncodedFaceImageResult, MBAgeResult, MBDocumentExpirationCheckResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
@@ -149,6 +151,11 @@ MB_INIT_UNAVAILABLE
  * The additional number of the document.
  */
 @property (nonatomic, readonly, nullable) NSString *documentAdditionalNumber;
+
+/**
+ * The one more additional number of the document.
+ */
+@property (nonatomic, readonly, nullable) NSString *documentOptionalAdditionalNumber;
 
 /**
  * The issuing authority of the document.

@@ -39,7 +39,7 @@ MB_INIT_UNAVAILABLE
  *
  * Higher number means more reliable detection, but slower processing
  */
-@property (nonatomic, assign) NSUInteger numStableDetectionsThreshold;
+@property (nonatomic, assign) NSInteger numStableDetectionsThreshold;
 
 /**
  * Document specifications describe the documents that should be detected with

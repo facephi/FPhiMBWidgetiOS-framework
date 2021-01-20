@@ -14,6 +14,7 @@
 #import "MBFaceImage.h"
 #import "MBFaceImageDpi.h"
 #import "MBFullDocumentImageExtensionFactors.h"
+#import "MBMicroblinkDefines.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Document Face Recognizer recognizer is used for scanning documents containing face images.
  */
-PP_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_AVAILABLE_IOS(8.0) MB_CLASS_DEPRECATED("Use MBBlinkIdRecognizer with photoID right.") MB_FINAL
 @interface MBDocumentFaceRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBFaceImage, MBFaceImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
@@ -47,7 +48,7 @@ MB_INIT
  *
  * Default: 6
  */
-@property (nonatomic, assign) NSUInteger numStableDetectionsThreshold;
+@property (nonatomic, assign) NSInteger numStableDetectionsThreshold;
     
 
 @end

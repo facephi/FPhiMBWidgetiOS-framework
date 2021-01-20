@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
 * Recognizer which can scan front and back side of Nigerian Voter ID cards.
 */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(8.0) MB_CLASS_DEPRECATED("Use MBBlinkIdCombinedRecognizer.") MB_FINAL
 @interface MBNigeriaCombinedRecognizer : MBRecognizer<NSCopying, MBCombinedRecognizer, MBDigitalSignature, MBGlareDetection, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
@@ -43,7 +43,7 @@ MB_INIT
  *
  * Default: 6
  */
-@property (nonatomic, assign) NSUInteger numStableDetectionsThreshold;
+@property (nonatomic, assign) NSInteger numStableDetectionsThreshold;
 
 @end
 

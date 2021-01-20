@@ -47,7 +47,7 @@ MB_INIT_UNAVAILABLE;
  *
  * Default: 3
  */
-@property(nonatomic) NSUInteger consecutiveScanThreshold;
+@property(nonatomic) NSInteger consecutiveScanThreshold;
 
 /**
  * Background color of successful scan result

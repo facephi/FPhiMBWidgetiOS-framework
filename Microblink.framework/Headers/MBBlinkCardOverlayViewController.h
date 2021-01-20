@@ -7,6 +7,8 @@
 
 #import "MBBaseOverlayViewController.h"
 #import "MBBlinkCardOverlaySettings.h"
+#import "MBBlinkCardEditResult.h"
+#import "MBBlinkCardEditViewController.h"
 
 @protocol MBBlinkCardOverlayViewControllerDelegate;
 
@@ -27,6 +29,11 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
  * Delegate
  */
 @property (nonatomic, weak, readonly) id<MBBlinkCardOverlayViewControllerDelegate> delegate;
+
+/*
+ * Editable view controller
+ */
+@property(nonatomic, strong, nullable) MBBlinkCardEditViewController *blinkCardEditViewController;
 
 /**
  * Designated intializer.
@@ -85,6 +92,13 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
  *  @param blinkCardOverlayViewController blinkCardOverlayViewController Scanning view controller responsible for scanning
  */
 - (void)blinkCardOverlayViewControllerDidFinishScanningFirstSide:(nonnull MBBlinkCardOverlayViewController *)blinkCardOverlayViewController;
+
+/**
+ * Called when scanning library edit screen values are confirmed
+ *
+ *  @param blinkCardOverlayViewController BlinkCardOverlayViewController Scanning view controller responsible for scanning and showing edit view controller
+ */
+- (void)blinkCardOverlayViewControllerDidFinishEditing:(nonnull MBBlinkCardOverlayViewController *)blinkCardOverlayViewController editResult:(MBBlinkCardEditResult *)editResult;
 
 @end
 

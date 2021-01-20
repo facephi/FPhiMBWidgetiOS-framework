@@ -8,8 +8,13 @@
 
 // Overlays
 #import "MBBlinkCardOverlayViewController.h"
+#import "MBBlinkCardOverlayTheme.h"
 #import "MBBlinkCardOverlaySettings.h"
+#import "MBBlinkCardEditFieldConfiguration.h"
 #import "MBCustomOverlayViewController.h"
+#import "MBBlinkCardEditViewController.h"
+#import "MBBlinkCardEditOverlayTheme.h"
+#import "MBBlinkCardEditNavigationController.h"
 
 // Overlay subviews
 #import "MBRectDocumentSubview.h"

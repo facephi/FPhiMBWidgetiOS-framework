@@ -7,6 +7,8 @@
 
 #import "MBSubview.h"
 
+@protocol MBRectDocumentSubviewDelegate;
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -25,11 +27,37 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
 
 @property (nonatomic) NSString *titleText;
 
+@property (nonatomic) UILabel *titleView;
+
+@property (nonatomic) CGSize viewSize;
+
+@property (nonatomic, weak, nullable) id<MBRectDocumentSubviewDelegate> rectSubviewDelegate;
+
 - (void)startScanLineAnimation;
 
 - (void)stopScanLineAnimation;
 
 - (void)startFlipAnimation;
+
+- (void)startErrorModeUI;
+
+- (void)startIdleModeUI;
+
+- (void)startAnimation;
+
+- (void)startTransitionFinishedAnimation;
+
+- (void)resetTitleLabelConstraint;
+
+@end
+
+@protocol MBRectDocumentSubviewDelegate <NSObject>
+
+- (void)rectDocumentSubviewDidFinishFlipAnimation:(nonnull MBRectDocumentSubview *)rectDocumentSubvie;
+
+- (void)rectDocumentSubviewDidFinishAnimation:(nonnull MBRectDocumentSubview *)rectDocumentSubvie;
+
+- (void)rectDocumentSubviewDidFinishTransitionAnimation:(nonnull MBRectDocumentSubview *)rectDocumentSubvie;
 
 @end
 

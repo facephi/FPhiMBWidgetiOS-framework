@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Struct which defines a range on the image
  */
-typedef struct _MBRange {
+typedef struct MBRange {
     CGFloat start;
     CGFloat stop;
 } MBRange;
@@ -33,7 +33,7 @@ NS_INLINE MBRange MBMakeRange(CGFloat start, CGFloat stop) {
 /**
  * Struct which defines a scale which detector searches on the image
  */
-typedef struct _MBScale {
+typedef struct MBScale {
     CGFloat scale;
     CGFloat tolerance;
 } MBScale;
@@ -146,7 +146,7 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
 /**
  * Scanning mode that defines in which orientations can this document be detected.
  *
- * Default: PPScanningModeAuto
+ * Default: MBScanningModeAuto
  */
 @property (nonatomic, assign) MBScanningMode scanningMode;
 

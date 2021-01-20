@@ -98,7 +98,23 @@ typedef NS_ENUM(NSInteger, MBCountry) {
     MBCountryOman,
     MBCountryEcuador,
     MBCountryElSalvador,
-    MBCountrySriLanka
+    MBCountrySriLanka,
+    MBCountryPeru,
+    MBCountryUruguay,
+    MBCountryBahamas,
+    MBCountryBermuda,
+    MBCountryBolivia,
+    MBCountryChina,
+    MBCountryEuropeanUnion,
+    MBCountryHaiti,
+    MBCountryHonduras,
+    MBCountryIceland,
+    MBCountryJapan,
+    MBCountryLuxembourg,
+    MBCountryMontenegro,
+    MBCountryNicaragua,
+    MBCountrySouthKorea,
+    MBCountryVenezuela
 };
 
 typedef NS_ENUM(NSInteger, MBRegion) {
@@ -170,7 +186,20 @@ typedef NS_ENUM(NSInteger, MBRegion) {
     MBRegionWestVirginia,
     MBRegionWisconsin,
     MBRegionWyoming,
-    MBRegionYukon
+    MBRegionYukon,
+    MBRegionCiudadDeMexico,
+    MBRegionJalisco,
+    MBRegionNewfoundlandAndLabrador,
+    MBRegionNuevoLeon,
+    MBRegionBajaCalifornia,
+    MBRegionChihuahua,
+    MBRegionGuanajuato,
+    MBRegionGuerrero,
+    MBRegionMexico,
+    MBRegionMichoacan,
+    MBRegionNewYorkCity,
+    MBRegionTamaulipas,
+    MBRegionVeracruz
 };
 
 typedef NS_ENUM(NSInteger, MBType) {
@@ -198,7 +227,18 @@ typedef NS_ENUM(NSInteger, MBType) {
     MBTypeMilitaryId,
     MBTypeMyKas,
     MBTypeSocialSecurityCard,
-    MBTypeHealthInsuranceCard
+    MBTypeHealthInsuranceCard,
+    MBTypePassport,
+    MBTypeSPass,
+    MBTypeAddressCard,
+    MBTypeAlienId,
+    MBTypeAlienPassport,
+    MBTypeGreenCard,
+    MBTypeMinorsId,
+    MBTypePostalId,
+    MBTypeProfessionalDl,
+    MBTypeTaxId,
+    MBTypeWeaponPermit
 };
 
 #endif /* MBClassInfoTypes_h */

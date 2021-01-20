@@ -1,8 +1,8 @@
 //
-//  MBBlinkCardRecognizerResult.h
-//  MicroblinkDev
+//  MBBlinkCardRecognizer.h
+//  BlinkShowcaseDev
 //
-//  Created by juraskrlec on 29/08/2018.
+//  Created by Jura Skrlec on 02/11/2020.
 //
 
 #import "MBRecognizer.h"
@@ -13,17 +13,16 @@
 #import "MBFullDocumentImage.h"
 #import "MBEncodeFullDocumentImage.h"
 #import "MBFullDocumentImageDpi.h"
-#import "MBGlareDetection.h"
 #import "MBDigitalSignature.h"
 #import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Recognizer used for scanning the front side of credit/debit cards.
+ * Recognizer used for scanning credit/debit cards.
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBBlinkCardRecognizer : MBRecognizer <NSCopying, MBCombinedRecognizer, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection, MBDigitalSignature, MBFullDocumentImageExtensionFactors>
+MB_CLASS_AVAILABLE_IOS(9.0) MB_FINAL
+@interface MBBlinkCardRecognizer : MBRecognizer <NSCopying, MBCombinedRecognizer, MBDigitalSignature, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
@@ -35,7 +34,7 @@ MB_INIT
 /**
  * Should extract the card owner information
  *
- * Default: NO
+ * Default: YES
  */
 @property (nonatomic, assign) BOOL extractOwner;
 
@@ -44,7 +43,7 @@ MB_INIT
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractValidThru;
+@property (nonatomic, assign) BOOL extractExpiryDate;
 
 /**
  * Should extract CVV
@@ -56,44 +55,25 @@ MB_INIT
 /**
  * Should extract the payment card's IBAN
  *
- * Default: NO
+ * Default: YES
  */
 @property (nonatomic, assign) BOOL extractIban;
 
 /**
- * Should extract the card's inventory number
+ * Defines whether blured frames filtering is allowed
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractInventoryNumber;
+@property (nonatomic, assign) BOOL allowBlurFilter;
 
 /**
- * Should anonymize the card number area (redact image pixels) on the document image result
+ * Pading is a minimum distance from the edge of the frame and is defined as a percentage of the frame width. Default value is 0.0f and in that case
+ * padding edge and image edge are the same.
+ * Recommended value is 0.02f.
  *
- * Default: NO
+ * Default: 0.0f
  */
-@property (nonatomic, assign) BOOL anonymizeCardNumber;
-
-/**
- * Should anonymize the owner area (redact image pixels) on the document image result
- *
- * Default: NO
- */
-@property (nonatomic, assign) BOOL anonymizeOwner;
-
-/**
- * Should anonymize the CVV on the document image result
- *
- * Default: NO
- */
-@property (nonatomic, assign) BOOL anonymizeCvv;
-
-/**
- * Should anonymize the IBAN area (redact image pixels) on the document image result
- *
- * Default: NO
- */
-@property (nonatomic, assign) BOOL anonymizeIban;
+@property (nonatomic, assign) CGFloat paddingEdge;
 
 @end
 

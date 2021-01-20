@@ -39,11 +39,11 @@ MB_INIT_UNAVAILABLE
 @property(nonatomic, assign, readonly) BOOL uncertain;
 
 /**
- * Method which gives string representation for a given PPBarcodeType enum value.
+ * Method which gives string representation for a given MBBarcodeType enum value.
  *
- *  @param type PPBarcodeType enum value
+ *  @param type MBBarcodeType enum value
  *
- *  @return String representation of a given PPBarcodeType enum value.
+ *  @return String representation of a given MBBarcodeType enum value.
  */
 + (NSString *_Nonnull)toTypeName:(MBBarcodeType)type;
 

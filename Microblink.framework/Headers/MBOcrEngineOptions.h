@@ -65,19 +65,19 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 /**
  * Type of the document which recognizer scans
  */
-typedef NS_ENUM(NSInteger, PPDocumentType) {
+typedef NS_ENUM(NSInteger, MBDocumentType) {
 
     /** Document type for latin documents used with BlinkOCR recognizer */
-    PPBlinkOCRDocumentType,
+    MBBlinkOCRDocumentType,
 
     /** Document type for MICR font */
-    PPMicrDocumentType,
+    MBMicrDocumentType,
 
     /** Document type for Arabic characters */
-    PPArabicDocumentType,
+    MBArabicDocumentType,
 
     /** Document type for handwriting */
-    PPHandwrittenDocumentType
+    MBHandwrittenDocumentType
 };
 
 /**
@@ -95,9 +95,9 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 /**
  * Type of document scanned.
  *
- * Default: PPBlinkOCRDocumentType
+ * Default: MBBlinkOCRDocumentType
  */
-@property (nonatomic, assign) PPDocumentType documentType;
+@property (nonatomic, assign) MBDocumentType documentType;
 
 /**
  * Minimal height of the line of text given in pixels. All chars smaller than this value will be ignored.
@@ -106,7 +106,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  *
  * Default: 10
  */
-@property (nonatomic, assign) NSUInteger minimalLineHeight;
+@property (nonatomic, assign) NSInteger minimalLineHeight;
 
 /**
  * Maximal height of the line of text given in pixels.
@@ -115,7 +115,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  *
  * Default: 200
  */
-@property (nonatomic, assign) NSUInteger maximalLineHeight;
+@property (nonatomic, assign) NSInteger maximalLineHeight;
 
 /**
  * Specifies if the image processing is performed on image

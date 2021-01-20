@@ -6,7 +6,7 @@
 //
 
 #import "MBRecognizer.h"
-#import "MBBlinkCardEliteRecognizerResult.h"
+#import "MBLegacyBlinkCardEliteRecognizerResult.h"
 
 #import "MBCombinedRecognizer.h"
 
@@ -22,15 +22,15 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Recognizer used for scanning the front side of elite credit/debit cards.
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBBlinkCardEliteRecognizer : MBRecognizer <NSCopying, MBCombinedRecognizer, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection, MBDigitalSignature, MBFullDocumentImageExtensionFactors>
+MB_CLASS_AVAILABLE_IOS(8.0) MB_CLASS_DEPRECATED("Use MBBlinkCardRecognizer") MB_FINAL
+@interface MBLegacyBlinkCardEliteRecognizer : MBRecognizer <NSCopying, MBCombinedRecognizer, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection, MBDigitalSignature, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
 /**
  * Result of scanning Elite Payment Card Front Recognizer
  */
-@property (nonatomic, strong, readonly) MBBlinkCardEliteRecognizerResult *result;
+@property (nonatomic, strong, readonly) MBLegacyBlinkCardEliteRecognizerResult *result;
 
 /**
  * Should extract the card owner information

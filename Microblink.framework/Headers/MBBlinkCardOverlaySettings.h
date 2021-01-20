@@ -6,6 +6,7 @@
 //
 
 #import "MBBaseOcrOverlaySettings.h"
+#import "MBBlinkCardEditFieldConfiguration.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -43,13 +44,23 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
 @property(nonatomic, strong) NSString *backSideMessage;
 
 /**
- * Returns/sets status message that is shows when scanning of payment card
- * is done.
+ * Defines whether glare warning will be displayed when user turn on a flashlight
  *
- * Default: string defined by "blink_card_done_message" key in
- * key in strings file in Microblink.bundle
+ * Default: YES
+*/
+@property(nonatomic, assign) BOOL showFlashlightWarning;
+
+/**
+ * Defines whether manual edit screen is enabled
+ *
+ * Default: YES
+*/
+@property(nonatomic, assign) BOOL enableEditScreen;
+
+/**
+ * Defines edit configuration settings
  */
-@property(nonatomic, strong) NSString *doneScanningMessage;
+@property(nonatomic, strong) MBBlinkCardEditFieldConfiguration *fieldConfiguration;
 
 @end
 

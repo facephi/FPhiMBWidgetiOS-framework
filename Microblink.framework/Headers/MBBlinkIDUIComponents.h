@@ -22,6 +22,7 @@
 #import "MBDocumentVerificationOverlaySettings.h"
 #import "MBBlinkIdOverlayViewController.h"
 #import "MBBlinkIdOverlaySettings.h"
+
 //#import "MBLivenessOverlayViewController.h"
 //#import "MBLivenessOverlaySettings.h"
 
@@ -31,3 +32,6 @@
 #import "MBDocumentVerificationInstructionsSubview.h"
 #import "MBCameraReticle.h"
 #import "MBErrorReticle.h"
+
+// Theme
+#import "MBBlinkIdOverlayTheme.h"

@@ -1,8 +1,8 @@
 //
-//  MBBlinkCardEliteRecognizerResult.h
-//  MicroblinkDev
+//  MBBlinkCardRecognizerResult.h
+//  MicroBlinkDev
 //
-//  Created by juraskrlec on 10/10/2018.
+//  Created by juraskrlec on 29/08/2018.
 //
 
 #import "MBRecognizerResult.h"
@@ -14,13 +14,15 @@
 #import "MBCombinedFullDocumentImageResult.h"
 #import "MBEncodedCombinedFullDocumentImageResult.h"
 
+#import "MBLegacyCardIssuer.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of the Elite Payment Card
+ * Class representing values obtained when scanning front side of the Payment Card
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBBlinkCardEliteRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBDigitalSignatureResult, MBCombinedFullDocumentImageResult, MBEncodedCombinedFullDocumentImageResult>
+MB_CLASS_AVAILABLE_IOS(8.0) MB_CLASS_DEPRECATED("Use MBBlinkCardRecognizerResult")
+@interface MBLegacyBlinkCardRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBDigitalSignatureResult, MBCombinedFullDocumentImageResult, MBEncodedCombinedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
@@ -48,6 +50,16 @@ MB_INIT_UNAVAILABLE
  * Payment card's inventory number.
  */
 @property (nonatomic, readonly) NSString *inventoryNumber;
+
+/**
+ * Payment card's issuing network
+ */
+@property (nonatomic, readonly) MBLegacyCardIssuer issuer;
+
+/**
+ * Payment card's IBAN
+ */
+@property (nonatomic, readonly) NSString *iban;
 
 @end
 
