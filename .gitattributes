@@ -1,3 +1,9 @@
 *.framework filter=lfs diff=lfs merge=lfs -text
 *.bundle filter=lfs diff=lfs merge=lfs -text
 Microblink.framework/Microblink filter=lfs diff=lfs merge=lfs -text
+Microblink.xcframework/ios-arm64_armv7/Microblink.framework/model_general_blink_ocr.zzip filter=lfs diff=lfs merge=lfs -text
+Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Microblink filter=lfs diff=lfs merge=lfs -text
+Microblink.xcframework/ios-arm64_x86_64-maccatalyst/Microblink.framework/Versions/5.11.0/Resources/model_general_blink_ocr.zzip filter=lfs diff=lfs merge=lfs -text
+Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/model_general_blink_ocr.zzip filter=lfs diff=lfs merge=lfs -text
+Microblink.xcframework/ios-arm64_armv7/Microblink.framework/Microblink filter=lfs diff=lfs merge=lfs -text
+Microblink.xcframework/ios-arm64_x86_64-maccatalyst/Microblink.framework/Versions/5.11.0/Microblink filter=lfs diff=lfs merge=lfs -text
