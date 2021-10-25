@@ -86,6 +86,16 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSString *lastName;
 
 /**
+ * The father's name of the document owner.
+ */
+@property (nonatomic, readonly, nullable) NSString *fathersName;
+
+/**
+ * The mother's name of the document owner.
+ */
+@property (nonatomic, readonly, nullable) NSString *mothersName;
+
+/**
  * The sex of the document owner.
  */
 @property (nonatomic, readonly, nullable) NSString *sex;
@@ -209,6 +219,16 @@ MB_INIT_UNAVAILABLE
  * Defines status of the last recognition process.
  */
 @property (nonatomic, readonly, assign) MBProcessingStatus processingStatus;
+
+/**
+ * Status of the last front side recognition process.
+ */
+@property (nonatomic, readonly, assign) MBProcessingStatus frontProcessingStatus;
+
+/**
+ * Status of the last back side recognition process.
+ */
+@property (nonatomic, readonly, assign) MBProcessingStatus backProcessingStatus;
 
 /**
  * Recognition mode used to scan current document.
