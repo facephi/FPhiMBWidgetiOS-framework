@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Result of MBBarcodeRecognizer; is used for scanning most of 1D barcode formats, and 2D format
- * such as Aztec, DataMatrix and QR code
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
 @interface MBBarcodeRecognizerResult : MBRecognizerResult<NSCopying>

@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * MBBarcodeRecognizer is used for scanning most of 1D barcode formats, and 2D format
- * such as Aztec, DataMatrix and QR code
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
 @interface MBBarcodeRecognizer : MBRecognizer<NSCopying>
@@ -27,13 +26,6 @@ MB_INIT
  * Barcode recognizer results
  */
 @property (nonatomic, strong, readonly) MBBarcodeRecognizerResult *result;
-
-/**
- * Set this to YES to scan Aztec 2D barcodes
- *
- * Default: NO
- */
-@property (nonatomic, assign) BOOL scanAztecCode;
 
 /**
  * Set this to YES to scan Code 128 1D barcodes
@@ -48,13 +40,6 @@ MB_INIT
  * Default: NO
  */
 @property (nonatomic, assign) BOOL scanCode39;
-
-/**
- * Set this to YES to scan DataMatrix 2D barcodes
- *
- * Default: NO
- */
-@property (nonatomic, assign) BOOL scanDataMatrix;
 
 /**
  * Set this to YES to scan EAN 13 barcodes
