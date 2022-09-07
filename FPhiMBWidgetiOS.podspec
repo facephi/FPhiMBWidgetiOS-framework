@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
 
   spec.ios.deployment_target = "9.0.0"
   spec.ios.requires_arc = false
-  spec.ios.vendored_frameworks = "WidgetMBPackage/Frameworks/Microblink.xcframework"
+  spec.ios.vendored_frameworks = "Microblink.xcframework"
   spec.ios.frameworks = "Accelerate", "AVFoundation", "AudioToolbox", "AssetsLibrary", "CoreMedia"
   spec.ios.libraries = "c++", "iconv", "z"
 
@@ -36,3 +36,4 @@ Pod::Spec.new do |spec|
   spec.user_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386' }
 
 end
+
