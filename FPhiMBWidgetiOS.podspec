@@ -32,8 +32,12 @@ Pod::Spec.new do |spec|
   spec.ios.frameworks = "Accelerate", "AVFoundation", "AudioToolbox", "AssetsLibrary", "CoreMedia"
   spec.ios.libraries = "c++", "iconv", "z"
 
-  spec.pod_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386' }
-  spec.user_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386' }
+  spec.pod_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386', 'EXCLUDED_ARCHS' => 'armv7' }
+  spec.user_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386', 'EXCLUDED_ARCHS' => 'armv7' }
+  spec.xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386',
+    'EXCLUDED_ARCHS' => 'armv7'
+    }
 
 end
 
