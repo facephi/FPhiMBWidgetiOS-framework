@@ -14,7 +14,7 @@ on:
 #     working-directory: ./scripts
 
 jobs:
-  deploy_pod_Memb:
+  deploy_pod_Microblink:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
