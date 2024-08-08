@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "FPhiMBWidgetiOS"
-  spec.version      = "5.20.0"
+  spec.version      = "6.9.2"
   spec.summary      = "Support library for Selphid."
 
   spec.description  = <<-DESC
@@ -26,9 +26,9 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/facephi/microblink-framework.git", :tag => "#{spec.version}" }
   spec.platform     = :ios
 
-  spec.ios.deployment_target = "9.0.0"
+  spec.ios.deployment_target = "13.0"
   spec.ios.requires_arc = false
-  spec.ios.vendored_frameworks = "Microblink.xcframework"
+  spec.ios.vendored_frameworks = "BlinkID.xcframework"
   spec.ios.frameworks = "Accelerate", "AVFoundation", "AudioToolbox", "AssetsLibrary", "CoreMedia"
   spec.ios.libraries = "c++", "iconv", "z"
 
