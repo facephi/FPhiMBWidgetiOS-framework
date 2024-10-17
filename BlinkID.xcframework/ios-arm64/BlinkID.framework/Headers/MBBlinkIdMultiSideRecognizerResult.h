@@ -30,6 +30,7 @@
 #import "MBDocumentExpirationCheckResult.h"
 #import "MBDataMatchResult.h"
 #import "MBAdditionalProcessingInfo.h"
+#import "MBDependentInfo.h"
 
 @class MBStringResult;
 
@@ -312,6 +313,41 @@ MB_INIT_UNAVAILABLE
  * The visa type.
  */
 @property (nonatomic, readonly, nullable) MBStringResult *visaType;
+
+/**
+ * The manufacturing year.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *manufacturingYear;
+
+/**
+ * The eligibility category.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *vehicleType;
+
+/**
+ * The manufacturing year..
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *eligibilityCategory;
+
+/**
+ * The specific document validity.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *specificDocumentValidity;
+
+/**
+ * The dependents info.
+ */
+@property (nonatomic, readonly, nullable) NSArray<MBDependentInfo *>* dependentInfos;
+
+/**
+ * This member indicates whether the barcode scanning step was utilized during the
+ * process.
+ * If the barcode scanning step was executed: a parsable barcode image will be stored in the
+ * `barcodeCameraFrame`.
+ * If the barcode scanning step was not executed: a parsable barcode image will be stored in the
+ * `fullDocumentImage`.
+ */
+@property (nonatomic, readonly) BOOL barcodeStepUsed;
 
 @end
 

@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "FPhiMBWidgetiOS"
-  spec.version      = "6.9.2"
+  spec.version      = "6.11.0"
   spec.summary      = "Support library for Selphid."
 
   spec.description  = <<-DESC
