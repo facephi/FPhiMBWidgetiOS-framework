@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint FPhiMBWidgetiOSInternal.podspec' to ensure this is a
+#  Be sure to run `pod spec lint FPhiMBWidgetiOS.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "FPhiMBWidgetiOS"
-  spec.version      = "6.11.0"
+  spec.version      = "6.13.0"
   spec.summary      = "Support library for Selphid."
 
   spec.description  = <<-DESC
@@ -23,7 +23,7 @@ Pod::Spec.new do |spec|
               }
 
   spec.author       = { "FacePhi Biometría" => "developer@facephi.com" }
-  spec.source       = { :git => "https://github.com/facephi/microblink-framework.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/facephi/FPhiMBWidgetiOS-framework.git", :tag => "#{spec.version}" }
   spec.platform     = :ios
 
   spec.ios.deployment_target = "13.0"
